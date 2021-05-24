@@ -7,7 +7,7 @@
 - 👋 Allo, Je m'appelle Rodrigo Zamperlini. 
 - 👀 Je m'interesse par tous les sujets qui concernent les Finances, le Contrôle et le Développement Logiciel.
 - 🌱 Je parle courrament le français mais je continue à étudier pour m'amméliorer. Faut que je pratique la langue parlé, quand même! J'étudie en ce moment les techniques de BlockChain et le développement d'une Crypto Monnaie. 
-- 💞️ J'aimerais bien m'intégrer à des projets internationaux et multiculturels pour aider les organizations à améliorer leur performance. À mon avis les organizations qui ont une bonne performance en finances et coûts ont aussi une tendence à mieux remplir leur objectifs sociaux et environnementaux. D'autr part, les organizations qui ont une mauvaise performance ont une tendence à être destructeurs et négligentes envers leurs employés et l'environnement.
+- 💞️ J'aimerais bien m'intégrer à des projets internationaux et multiculturels pour aider les organizations à améliorer leur performance. À mon avis les organizations qui ont une bonne performance en finances et coûts ont aussi une tendence à mieux remplir leur objectifs sociaux et environnementaux. D'autre part, les organizations qui ont une mauvaise performance ont une tendence à être destructeurs et négligentes envers leurs employés et l'environnement.
 - 📫 Mon contact: rzamperlini@gmail.com
 
 - 👋 Oi, me chamo Rodrigo Zamperlini. 
