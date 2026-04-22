@@ -8,8 +8,8 @@ description = "Portfolio for solution architecture, integration architecture, Po
 [output.html]
 default-theme = "navy"
 preferred-dark-theme = "navy"
-git-repository-url = "https://github.com/YOUR_GITHUB_USERNAME/rodrigo-mdbook-portfolio"
-edit-url-template = "https://github.com/YOUR_GITHUB_USERNAME/rodrigo-mdbook-portfolio/edit/main/{path}"
+git-repository-url = "https://github.com/rzamperlini/rzamperlini"
+edit-url-template = "https://github.com/rzamperlini/rzamperlini/edit/main/{path}"
 additional-css = ["theme/custom.css"]
 
 no-section-label = true
