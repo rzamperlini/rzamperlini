@@ -40,3 +40,10 @@ The architecture ensured separation between data, process and document managemen
 - Improved security and access control
 - Scalable batch processing capability
 - Increased reliability of financial operations
+
+## Architecture Principles Applied
+
+- Separation of concerns
+- Security by design
+- Integration-first approach
+- Scalability and maintainability
