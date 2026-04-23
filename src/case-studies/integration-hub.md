@@ -2,7 +2,7 @@
 
 ## Context
 
-Multiple systems required synchronization with better control over data quality and integration reliability.
+Multiple systems required synchronization of business data across different platforms, leading to inconsistencies and operational inefficiencies.
 
 ## Challenges
 
@@ -11,22 +11,29 @@ Multiple systems required synchronization with better control over data quality 
 - Performance concerns
 - Duplication of business data
 
-## Architecture
+## Architecture approach
 
-- Dataverse as a central business data hub
+A centralized integration model was implemented:
+
+- Dataverse as the system of reference
 - APIs for system communication
 - Power Automate for orchestration
-- Controlled synchronization patterns
+
+The architecture followed an API-first and integration-driven approach.
 
 ## Key decisions
 
-- Centralized data model
-- API-first integration approach
-- Controlled interface boundaries
-- Explicit ownership of business entities
+- Establishing Dataverse as the central data authority
+- Using APIs to decouple systems
+- Implementing controlled synchronization flows
+- Avoiding direct system-to-system dependencies
 
-## Results
+## Architecture overview
 
-- Improved data consistency
-- Reduced duplication
+
+## Results & Impact
+
+- Improved data consistency across systems
+- Reduced duplication and errors
+- Simplified integration logic
 - Better system reliability
