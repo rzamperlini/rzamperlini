@@ -37,3 +37,10 @@ The architecture followed an API-first and integration-driven approach.
 - Reduced duplication and errors
 - Simplified integration logic
 - Better system reliability
+
+## Architecture Principles Applied
+
+- Separation of concerns
+- Security by design
+- Integration-first approach
+- Scalability and maintainability
