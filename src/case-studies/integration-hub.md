@@ -30,6 +30,33 @@ The architecture followed an API-first and integration-driven approach.
 
 ## Architecture overview
 
+```mermaid
+flowchart LR
+    subgraph Systems
+        S1[System A]
+        S2[System B]
+        S3[System C]
+    end
+
+    subgraph Integration Layer
+        API[API Layer]
+        FLOW[Orchestration Flows]
+    end
+
+    subgraph Core
+        DV[Dataverse]
+    end
+
+    S1 --> API
+    S2 --> API
+    S3 --> API
+
+    API --> FLOW
+    FLOW --> DV
+
+    DV --> FLOW
+    FLOW --> API
+```
 
 ## Results & Impact
 
