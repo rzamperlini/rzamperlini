@@ -34,6 +34,44 @@ The architecture prioritized traceability, governance and compliance.
 
 ## Architecture overview
 
+```mermaid
+flowchart TD
+    subgraph Users
+        J[Judges]
+        C[Clerks]
+        A[Administrators]
+    end
+
+    subgraph Application
+        APP[Model-Driven App]
+    end
+
+    subgraph Core System
+        DV[Dataverse]
+        WF[Workflows]
+    end
+
+    subgraph Security
+        RBAC[Role-Based Access]
+        AUDIT[Audit Logs]
+    end
+
+    subgraph Documents
+        DOC[Document Storage]
+    end
+
+    J --> APP
+    C --> APP
+    A --> APP
+
+    APP --> DV
+    DV --> WF
+
+    DV --> RBAC
+    DV --> AUDIT
+
+    WF --> DOC
+```
 
 ## Results & Impact
 
