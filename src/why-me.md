@@ -1,4 +1,4 @@
-## Why I Am a Strong Fit for an Integration Architecture Role
+# Why I Am a Strong Fit for an Integration Architecture Role
 
 ## Understanding of Complex Government Environments
 
