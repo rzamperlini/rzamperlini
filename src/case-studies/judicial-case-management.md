@@ -1,32 +1,43 @@
-# Judicial Case Management System
+# Judicial Case Management System (Conceptual)
 
 ## Context
 
-Managing judicial cases with strict compliance requirements and multiple business stakeholders.
+Design of a system to manage judicial cases, including records, decisions, and document workflows, within a highly regulated environment.
+
+The system needed to support multiple stakeholders while ensuring compliance with strict data governance and audit requirements.
 
 ## Challenges
 
-- High data sensitivity
-- Auditability requirements
-- Complex workflows
-- Role-based access needs
+- Highly sensitive data
+- Complex workflows across multiple actors
+- Strong audit and traceability requirements
+- Role-based access control
+- Long-term data integrity
 
-## Architecture
+## Architecture approach
 
-- Dataverse as core data platform
-- Model-driven application
-- Power Automate workflows
-- Security model aligned with role segregation
+The solution was designed around a secure, data-centric architecture:
+
+- Dataverse as the authoritative data source
+- Model-driven applications for structured user interaction
+- Power Automate for workflow orchestration
+- Role-based security model for access control
+
+The architecture prioritized traceability, governance and compliance.
 
 ## Key decisions
 
-- Strong data segmentation
-- Full audit logging
-- Workflow standardization
-- Long-term maintainability focus
+- Strict data segmentation based on roles and responsibilities
+- Full audit logging for all critical operations
+- Standardized workflows to ensure consistency
+- Separation between operational data and documents
 
-## Results
+## Architecture overview
 
-- Improved traceability
-- Better governance
-- Scalable architecture foundation
+
+## Results & Impact
+
+- Improved traceability and accountability
+- Enhanced compliance with regulatory requirements
+- Scalable architecture for long-term evolution
+- Clear governance model for data and access
