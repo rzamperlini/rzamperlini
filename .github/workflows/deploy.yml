@@ -1,0 +1,59 @@
+name: Deploy mdBook to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Installer Rust
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      # 3. Installer mdBook + Mermaid plugin
+      - name: Install mdBook and Mermaid
+        run: |
+          cargo install mdbook
+          cargo install mdbook-mermaid
+
+      # 4. IMPORTANT — installer Mermaid dans le projet
+      - name: Prepare Mermaid support
+        run: |
+          mdbook-mermaid install .
+          ls -R
+
+      # 5. Build
+      - name: Build book
+        run: mdbook build
+
+      # 6. Setup Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 7. Upload
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./book
+          
+      # 8. deploy         
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+
+      
