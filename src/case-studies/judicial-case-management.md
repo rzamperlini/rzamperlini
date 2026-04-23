@@ -41,3 +41,10 @@ The architecture prioritized traceability, governance and compliance.
 - Enhanced compliance with regulatory requirements
 - Scalable architecture for long-term evolution
 - Clear governance model for data and access
+
+## Architecture Principles Applied
+
+- Separation of concerns
+- Security by design
+- Integration-first approach
+- Scalability and maintainability
