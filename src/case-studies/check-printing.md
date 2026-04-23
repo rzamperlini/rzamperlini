@@ -34,6 +34,28 @@ The architecture ensured separation between data, process and document managemen
 
 ## Architecture Overview
 
+```mermaid
+flowchart LR
+    U[User] --> PA[Power Apps]
+
+    PA --> DV[Dataverse]
+    DV --> PF[Power Automate]
+
+    PF --> GEN[PDF Generation]
+    GEN --> SP[SharePoint Storage]
+
+    SP --> LINK[Secure Access Link]
+    LINK --> U
+
+    subgraph Security
+        CTRL[Access Control]
+        AUDIT[Audit Logging]
+    end
+
+    PF --> CTRL
+    SP --> AUDIT
+```
+
 ## Results & Impacts
 
 - Reduced manual intervention and errors
