@@ -20,20 +20,28 @@
 - Data traceability
 - Regulatory alignment
 
-```mermaid
 flowchart TD
+
     subgraph Identity
-        AAD[Azure AD]
+        ENTRA[Microsoft Entra ID]
     end
 
-    subgraph Access Control
-        RBAC[Role-Based Access]
-        SEC[Security Roles]
+    subgraph Authentication_Policy
+        AUTH[SSO / OAuth2 / OIDC]
+        MFA[MFA]
+        CA[Conditional Access]
     end
 
-    subgraph Data Layer
+    subgraph Authorization
+        RBAC[Role-Based Access Control]
+        APPROLE[Application Roles]
+        DVROLE[Dataverse Security Roles]
+    end
+
+    subgraph Data_Layer
         DV[Dataverse]
-        AUDIT[Audit Logs]
+        RLS[Row/Record-Level Security]
+        FLS[Field-Level Security]
     end
 
     subgraph Governance
@@ -42,21 +50,35 @@ flowchart TD
         ALM[ALM Pipelines]
     end
 
-    subgraph Compliance
+    subgraph Audit_Compliance
+        AUDIT[Audit Logs]
         TRACE[Traceability]
-        LOG[Monitoring & Logging]
+        MON[Monitoring & Logging]
     end
 
-    AAD --> RBAC
-    RBAC --> SEC
-    SEC --> DV
+    %% Identity → Authentication
+    ENTRA --> AUTH
+    AUTH --> MFA
+    MFA --> CA
 
+    %% Authentication → Authorization
+    CA --> RBAC
+
+    %% Authorization → Application
+    RBAC --> APPROLE
+    APPROLE --> DVROLE
+
+    %% Authorization → Data
+    DVROLE --> DV
+    DV --> RLS
+    DV --> FLS
+
+    %% Data → Audit
     DV --> AUDIT
     AUDIT --> TRACE
+    DV --> MON
 
+    %% Data → Governance
     DV --> DLP
     DLP --> ENV
     ENV --> ALM
-
-    DV --> LOG
-```
