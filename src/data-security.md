@@ -20,6 +20,7 @@
 - Data traceability
 - Regulatory alignment
 
+```mermaid
 flowchart TD
 
     subgraph Identity
@@ -77,7 +78,7 @@ flowchart TD
     DV --> AUDIT
     AUDIT --> TRACE
     DV --> MON
-
+```
     %% Data → Governance
     DV --> DLP
     DLP --> ENV
