@@ -78,8 +78,9 @@ flowchart TD
     DV --> AUDIT
     AUDIT --> TRACE
     DV --> MON
-```
+
     %% Data → Governance
     DV --> DLP
     DLP --> ENV
     ENV --> ALM
+```
