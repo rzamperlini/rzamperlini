@@ -23,17 +23,23 @@
 ```mermaid
 flowchart TD
 
-    subgraph Identity
+    subgraph Identity_Provider
         ENTRA[Microsoft Entra ID]
+        USERS[Users / Groups / Service Principals]
     end
 
-    subgraph Authentication_Policy
-        AUTH[SSO / OAuth2 / OIDC]
+    subgraph Authentication
+        SSO[Single Sign-On]
+        OIDC[OpenID Connect]
         MFA[MFA]
         CA[Conditional Access]
+        IDTOKEN[ID Token]
     end
 
     subgraph Authorization
+        OAUTH[OAuth 2.0]
+        SCOPES[Scopes / API Permissions]
+        ACCESSTOKEN[Access Token]
         RBAC[Role-Based Access Control]
         APPROLE[Application Roles]
         DVROLE[Dataverse Security Roles]
@@ -57,29 +63,34 @@ flowchart TD
         MON[Monitoring & Logging]
     end
 
-    %% Identity → Authentication
-    ENTRA --> AUTH
-    AUTH --> MFA
-    MFA --> CA
+    USERS --> ENTRA
 
-    %% Authentication → Authorization
-    CA --> RBAC
+    %% Authentication
+    ENTRA --> SSO
+    SSO --> OIDC
+    OIDC --> CA
+    CA --> MFA
+    MFA --> IDTOKEN
 
-    %% Authorization → Application
+    %% Authorization
+    IDTOKEN --> OAUTH
+    OAUTH --> SCOPES
+    SCOPES --> ACCESSTOKEN
+    ACCESSTOKEN --> RBAC
     RBAC --> APPROLE
     APPROLE --> DVROLE
 
-    %% Authorization → Data
+    %% Data access
     DVROLE --> DV
     DV --> RLS
     DV --> FLS
 
-    %% Data → Audit
+    %% Audit
     DV --> AUDIT
     AUDIT --> TRACE
     DV --> MON
 
-    %% Data → Governance
+    %% Governance
     DV --> DLP
     DLP --> ENV
     ENV --> ALM
