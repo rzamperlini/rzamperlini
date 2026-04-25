@@ -1,7 +1,6 @@
 # Summary
 
 - [Home](README.md)
-- [Why me?](why-me.md)
 - [Architecture Vision](architecture-vision.md)
 - [Integration Architecture](integration-architecture.md)
 - [Governance & Power Platform](governance-power-platform.md)
@@ -14,5 +13,6 @@
 - [Leadership & Collaboration](leadership-collaboration.md)
 - [Articles](articles.md)
 - [Services](services.md)
+- [Why me?](why-me.md)
 - [Contact](contact.md)
 
