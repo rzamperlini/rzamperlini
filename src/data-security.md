@@ -101,7 +101,7 @@ A single unique identifier per transaction (Correlation ID)
 - generated once
 - propagated throughout the system
 - logged at every stage
-- 
+
 ```mermaid
 flowchart LR
 
