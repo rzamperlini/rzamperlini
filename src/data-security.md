@@ -95,3 +95,36 @@ flowchart TD
     DLP --> ENV
     ENV --> ALM
 ```
+
+## Traceability - Example
+A single unique identifier per transaction (Correlation ID)
+- generated once
+- propagated throughout the system
+- logged at every stage
+- 
+```mermaid
+flowchart LR
+
+    APP[Power Apps]
+    DV[Dataverse]
+    FLOW[Power Automate]
+    API[Azure Function / Logic App]
+    LEG[Legacy System]
+
+    LOG[(Central Logs)]
+    TRACE[(Traceability Store)]
+
+    APP --> DV
+    DV --> FLOW
+    FLOW --> API
+    API --> LEG
+
+    APP --> LOG
+    DV --> LOG
+    FLOW --> LOG
+    API --> LOG
+
+    APP --> TRACE
+    FLOW --> TRACE
+    API --> TRACE
+```
