@@ -10,7 +10,6 @@
   - [Judicial Case Management System](case-studies/judicial-case-management.md)
   - [Enterprise Integration Hub](case-studies/integration-hub.md)
 - [Architecture Decision Making](decision-making.md)
-- [Architecture Decision Record - Example](architecture-record.md)
 - [Leadership & Collaboration](leadership-collaboration.md)
 - [Articles](articles.md)
 - [Services](services.md)
