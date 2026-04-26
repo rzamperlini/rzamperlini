@@ -12,10 +12,12 @@ I evaluate:
 
 I document key decisions and ensure alignment across stakeholders before implementation.
 
+All major architectural decisions are documented using ADRs to ensure traceability, auditability, and long-term maintainability of the solution.
+
 ## Decision framing example
 
 ```mermaid
-flowchart LR
+flowchart TD
 
     subgraph Problem_Space
         PROB[Business Problem]
