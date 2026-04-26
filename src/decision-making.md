@@ -32,7 +32,7 @@ flowchart LR
     end
 
     subgraph Governance
-        ADR[Architecture Decision Record (ADR)]
+        ADR[Architecture Decision Record]
         REPO[ADR Repository / Decision Log]
     end
 
