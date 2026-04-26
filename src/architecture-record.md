@@ -1,4 +1,4 @@
-## Architecture Decision Record (ADR) - Exemple
+## Architecture Decision Record (ADR) - Example
 Use Azure Functions as Integration Adapter for Legacy Systems
 
 ## Status
