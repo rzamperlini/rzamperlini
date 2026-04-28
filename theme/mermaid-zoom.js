@@ -28,4 +28,8 @@
   window.addEventListener("load", function () {
     setTimeout(enableMermaidZoom, 500);
   });
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> 9b3dc7267d84b342ea53962430c10e51bc4d5d3a
