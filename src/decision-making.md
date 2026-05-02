@@ -64,6 +64,3 @@ flowchart TD
     MON --> REVIEW
     REVIEW --> ADR
 ```
-## Architecture Decision Record (ADR)
-
-[Architecture Decision Record - Example](architecture-record.md)
