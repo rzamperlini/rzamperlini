@@ -16,7 +16,53 @@ The architecture was designed to support:
 - Enterprise-grade governance and security
 
 ---
+## Architecture Overview
 
+```mermaid
+flowchart LR
+
+    subgraph External_Partners
+        FP[Funding Partners]
+    end
+
+    subgraph Intake_Layer
+        SP[SharePoint Intake]
+        PP[Power Pages - Initial Proposed Approach]
+    end
+
+    subgraph Validation_Orchestration
+        PA1[Power Automate\nValidation Flows]
+        DV[Dataverse]
+        PA2[Approval Workflow Flows]
+    end
+
+    subgraph Institution_Operations
+        MDA[Model-Driven Power App]
+        AP[Institution Approvers]
+    end
+
+    subgraph Treasury
+        PA3[Receivables Automation]
+        TREASURY[Treasury Application]
+    end
+
+    FP --> SP
+    FP -. Proposed .-> PP
+
+    SP --> PA1
+    PP --> PA1
+
+    PA1 --> DV
+    PA1 --> PA2
+
+    PA2 --> MDA
+    AP --> MDA
+
+    MDA --> PA3
+    PA3 --> TREASURY
+```
+
+---
 ## Business Context
 
 External funding partners periodically provide funding allocations and payment schedules to participating institutions responsible for executing social programs.
