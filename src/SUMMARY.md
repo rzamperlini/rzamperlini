@@ -6,6 +6,7 @@
 - [Governance & Power Platform](governance-power-platform.md)
 - [Data & Security Architecture](data-security.md)
 - [Case Studies](case-studies/README.md)
+  - [Public-Sector Funding Integration](case-studies/public-sector-funding.md) 
   - [Automated Check Printing System](case-studies/check-printing.md)
   - [Judicial Case Management System](case-studies/judicial-case-management.md)
   - [Enterprise Integration Hub](case-studies/integration-hub.md)
